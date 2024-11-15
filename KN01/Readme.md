@@ -65,6 +65,7 @@ Das Gleiche mache ich nun mit dem Arbeitsspeicher, diesen kann ich jedoch nicht 
 
 ![1731677973346](image/Readme/1731677973346.png)
 _Abbildung 5: Erhöhung des Arbeitsspeichers über dem Limit_
+
 ![1731677964220](image/Readme/1731677964220.png)
 _Abbildung 6: Fehlermeldung_
 
