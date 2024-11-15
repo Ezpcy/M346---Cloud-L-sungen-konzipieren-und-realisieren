@@ -30,6 +30,7 @@ Beispiele:
 Auf meinem System habe ich VirtualBox installiert und ein System mit Manjaro aufgesetzt:
 
 ![1731677300661](image/Readme/1731677300661.png)
+
 _Abbildung 1: VirtualBox_
 
 Diese Virtuelle Maschine ist ein Typ-2-Hypervisor, da VirtualBox auf meinem Host-Betriebssystem (NixOs) installiert ist.
@@ -39,6 +40,7 @@ Diese Virtuelle Maschine ist ein Typ-2-Hypervisor, da VirtualBox auf meinem Host
 Host-System:
 
 ![1731677451424](image/Readme/1731677451424.png)
+
 _Abbildung 2: Host-System_
 
 - Mein Host-System verfügt über 32 CPU-kerne und 64 GB RAM.
@@ -46,6 +48,7 @@ _Abbildung 2: Host-System_
 Nun füge ich der Virtuellen Maschine mehr Ressourcen hinzu als mein Host-System hat:
 
 ![1731677567923](image/Readme/1731677567923.png)
+
 _Abbildung 3: Erhöhung der Prozessoren_
 
 Das System lässt sich starten und führe folgenden Befehl aus:
@@ -64,9 +67,11 @@ Dies ist möglich, da die Virtuelle Maschine ein Typ-2-Hypervisor ist und die Re
 Das Gleiche mache ich nun mit dem Arbeitsspeicher, diesen kann ich jedoch nicht bis auf einen gewissen Wert erhöhen:
 
 ![1731677973346](image/Readme/1731677973346.png)
+
 _Abbildung 5: Erhöhung des Arbeitsspeichers über dem Limit_
 
 ![1731677964220](image/Readme/1731677964220.png)
+
 _Abbildung 6: Fehlermeldung_
 
 - Die Fehlermeldung zeigt, dass ich den Arbeitsspeicher nicht über ca. 60 GB erhöhen kann. Das liegt daran, dass eine VM nicht mehr Arbeitsspeicher haben kann als der Host-Computer zur Verfügung stellt. Die Virtuelle Maschine ist ein Typ-2-Hypervisor und teilt sich die Ressourcen mit dem Host-System. Würde eine VM mehr Arbeitsspeicher haben als der Host-Computer zur Verfügung stellt, würde das Host-System nicht mehr funktionieren.
@@ -78,6 +83,7 @@ free -h
 ```
 
 ![1731678318136](image/Readme/1731678318136.png)
+
 _Abbildung 7: Ausgabe des Befehls `free -h`_
 
 - Die Virtuelle Machine zeigt mir 57GiB (60 GB) Arbeitsspeicher an.
