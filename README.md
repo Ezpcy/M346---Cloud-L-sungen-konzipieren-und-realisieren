@@ -1,1 +1,1 @@
-# M346---Cloud-L-sungen-konzipieren-und-realisieren
+# M346 - Cloud Lösungen konzipieren und realisieren
