@@ -58,6 +58,7 @@ lscpu | grep "CPU(s)"
 ```
 
 ![1731677808858](image/Readme/1731677808858.png)
+
 _Abbildung 4: Ausgabe des Befehls `lscpu | grep "CPU(s)"`_
 
 - Die Virtuelle Maschine zeigt 48 CPU-Kerne an, obwohl mein Host-System nur 32 CPU-Kerne hat.
