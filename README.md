@@ -2,5 +2,6 @@
 
 ## Inhaltsverzeichnis
 
-- [KN01: Virtualisierung](KN01/Readme.md)
-- [KN02: laaS - Virtuelle Server](KN02/Readme.md)
+- [KN01: Virtualisierung](Kompetenznachweise/KN01/Readme.md)
+- [KN02: laaS - Virtuelle Server](Kompetenznachweise/KN02/Readme.md)
+- [KN03: laas - Virtuelle Server](Kompetenznachweise/KN03/Readme.md)
