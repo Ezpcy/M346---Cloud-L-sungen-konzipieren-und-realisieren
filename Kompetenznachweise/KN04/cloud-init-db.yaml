@@ -1,0 +1,33 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa
+      - ssh-rsa 
+ssh_pwauth: false
+disable_root: false
+package_update: true
+packages:
+  - mariadb-server
+  - php-mysqli
+
+runcmd:
+  - [
+      sh,
+      -c,
+      'sudo mysql -sfu root -e "GRANT ALL ON *.* TO ''admin''@''%'' IDENTIFIED BY ''pw'' WITH GRANT OPTION;"',
+    ]
+  - [
+      sh,
+      -c,
+      "sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf",
+    ]
+  - [sh, -c, "sudo systemctl restart mariadb"]
+  - [sh, -c, "sudo ufw allow 80/tcp"]
+  - [sh, -c, "sudo ufw allow 22/tcp"]
+  - [sh, -c, "sudo ufw allow 3306/tcp"]
+  - [sh, -c, "sudo ufw enable"]

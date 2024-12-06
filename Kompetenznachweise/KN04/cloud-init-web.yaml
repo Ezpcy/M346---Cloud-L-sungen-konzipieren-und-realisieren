@@ -1,0 +1,58 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa
+      - ssh-rsa
+ssh_pwauth: false
+disable_root: false
+package_update: true
+packages:
+  - apache2
+  - php
+  - libapache2-mod-php
+  - adminer
+
+write_files:
+  - path: /var/www/html/db.php
+    content: |
+      <?php
+          $servername = "127.0.0.1";
+          $username = "admin";
+          $password = "pw";
+          $dbname = "mysql";
+
+          $conn = new mysqli($servername, $username, $password, $dbname);
+          if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+          }
+
+          $sql = "select Host, User from mysql.user;";
+          $result = $conn->query($sql);
+          while ($row = $result->fetch_assoc()) {
+              echo("<li>" . $row["Host"] . " / " . $row["User"] . "</li>");
+          }
+      ?>
+  - path: /var/www/html/info.php
+    content: |
+      <?php
+        phpinfo();
+      ?>
+
+  - path: /var/www/html/index.html
+    content: |
+      <html>
+        <head><title>Willkommen</title></head>
+        <body><h1>Willkommen auf dem Webserver!</h1></body>
+      </html>
+
+runcmd:
+  - [sh, -c, "sudo a2enconf adminer"]
+  - [sh, -c, "sudo systemctl restart apache2"]
+  - [sh, -c, "sudo ufw allow 80/tcp"]
+  - [sh, -c, "sudo ufw allow 22/tcp"]
+  - [sh, -c, "sudo ufw enable"]
