@@ -6,3 +6,4 @@
 - [KN02: laaS - Virtuelle Server](Kompetenznachweise/KN02/Readme.md)
 - [KN03: laas - Virtuelle Server](Kompetenznachweise/KN03/Readme.md)
 - [KN04: Cloud-init and AWS](Kompetenznachweise/KN04/Readme.md)
+- [KN05: Netzwerk/Sicherheit](Kompetenznachweise/KN05/Readme.md)
