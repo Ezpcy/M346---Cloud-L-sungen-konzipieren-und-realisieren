@@ -6,7 +6,7 @@ users:
     home: /home/ubuntu
     shell: /bin/bash
     ssh_authorized_keys:
-      - ssh-rsa 
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDALtHV7YD9MN05PesCgCnoIrlLgn7vLSbicNR0EGUs4hWcn2Th4LezFOm2rhAX0s4Dhe/2rW71mvxRIK8tHSKO6NHZnI3FiY9LcJ9TUs/DJcYooML5qCRvi4R8ANMDgRiVGCdbu5g4XivgdU3ZYWlx3x4FBqipsl4XCTTvmy5AAdR+2koX+JwNSPR5T9gPiujaV5Ro1URj4DgnFFdtNz4VWTRw0UE4K8wMZP0aJl1Oxah/1gNXTRQZ9zldkxEQqv6Fqgh2xKbrsW6mJfcLiJUIdr5nSiqgFVVxXTxei2kbMGs7+QSNUkrZYHp/jgGEgurM4B0EnokC+C2f3xhCxpSZ aws-key       
 ssh_pwauth: false
 disable_root: false 
 package_update: true
