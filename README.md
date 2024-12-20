@@ -8,3 +8,4 @@
 - [KN04: Cloud-init and AWS](Kompetenznachweise/KN04/Readme.md)
 - [KN05: Netzwerk/Sicherheit](Kompetenznachweise/KN05/Readme.md)
 - [KN06: Skalierung](Kompetenznachweise/KN06/Readme.md)
+- [KN07: PAAS](Kompetenznachweise/KN07/Readme.md)
