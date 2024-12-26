@@ -9,3 +9,5 @@
 - [KN05: Netzwerk/Sicherheit](Kompetenznachweise/KN05/Readme.md)
 - [KN06: Skalierung](Kompetenznachweise/KN06/Readme.md)
 - [KN07: PAAS](Kompetenznachweise/KN07/Readme.md)
+- [KN08: Faas und Backup](Kompetenznachweise/KN08/Readme.md)
+- [KN09: Automation](Kompetenznachweise/KN09/Readme.md)

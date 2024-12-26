@@ -1,0 +1,33 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyWyGTDzzqq9YjuMqsrcXRMhZVrCbD+cnL2YLpTLbTli2jXcX6mISWVzrPQWEkF5OPWCVtWpUpyEgjwe7m7E5zvpI0bGiPrdzrPmO5SMhFI0gRJK5VdJEVl59XColb4ueqh3cwvpbX2kMV8fq04WY+So8mGFlZ+EB+SdvWkgdzde0KOoX8pZQje/rD6GpHF9Jjul075D1kmlS4aUlUmGkM3c6Z5j/phLjyTRayKOD/dZyTEVSGZaS9csd3Qu/b98qoH9VpvG7+ri+RNMh3IYkIpORJjhlCxxvb6uTR89WcvNT94kNBA0GUECQkguElLjx9WSR0RwimfOv4b+Ewj/sX tbz_aws_atilgan
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDALtHV7YD9MN05PesCgCnoIrlLgn7vLSbicNR0EGUs4hWcn2Th4LezFOm2rhAX0s4Dhe/2rW71mvxRIK8tHSKO6NHZnI3FiY9LcJ9TUs/DJcYooML5qCRvi4R8ANMDgRiVGCdbu5g4XivgdU3ZYWlx3x4FBqipsl4XCTTvmy5AAdR+2koX+JwNSPR5T9gPiujaV5Ro1URj4DgnFFdtNz4VWTRw0UE4K8wMZP0aJl1Oxah/1gNXTRQZ9zldkxEQqv6Fqgh2xKbrsW6mJfcLiJUIdr5nSiqgFVVxXTxei2kbMGs7+QSNUkrZYHp/jgGEgurM4B0EnokC+C2f3xhCxpSZ aws-key       
+ssh_pwauth: false
+disable_root: false
+package_update: true
+packages:
+  - mariadb-server
+  - php-mysqli
+
+runcmd:
+  - [
+      sh,
+      -c,
+      'sudo mysql -sfu root -e "GRANT ALL ON *.* TO ''admin''@''%'' IDENTIFIED BY ''170295sb'' WITH GRANT OPTION;"',
+    ]
+  - [
+      sh,
+      -c,
+      "sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf",
+    ]
+  - [sh, -c, "sudo systemctl restart mariadb"]
+  - [sh, -c, "sudo ufw allow 80/tcp"]
+  - [sh, -c, "sudo ufw allow 22/tcp"]
+  - [sh, -c, "sudo ufw allow 3306/tcp"]
+  - [sh, -c, "sudo ufw enable"]
