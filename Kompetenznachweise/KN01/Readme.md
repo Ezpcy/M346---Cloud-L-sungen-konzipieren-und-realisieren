@@ -18,7 +18,7 @@ Beispiele:
 
 ### Hypervisor Typ 2
 
-Ein Typ-2-Hypervisor ist ein ghosteter Hypervisor, der auf einem Betriebssystem installiert wird. Dieser interagiert über das Betriebssystem des Hosts mit der Hardware. Er wird auf dem Computer installiert wo er als Anwenung ausgeführt wird. Typ-2-Hypervisoren sind in der Regel weniger leistungsstark als Typ-1-Hypervisoren, da sie über das Betriebssystem des Hosts laufen. Die Systemressourcen werden zwischen dem Betriebssystem und dem Hypervisor aufgeteilt, wobei das Betriebssystem priorisiert wird.
+Ein Typ-2-Hypervisor ist ein gehosteter Hypervisor, der auf einem Betriebssystem installiert wird. Dieser interagiert über das Betriebssystem des Hosts mit der Hardware. Er wird auf dem Computer installiert wo er als Anwenung ausgeführt wird. Typ-2-Hypervisoren sind in der Regel weniger leistungsstark als Typ-1-Hypervisoren, da sie über das Betriebssystem des Hosts laufen. Die Systemressourcen werden zwischen dem Betriebssystem und dem Hypervisor aufgeteilt, wobei das Betriebssystem priorisiert wird.
 
 Beispiele:
 
