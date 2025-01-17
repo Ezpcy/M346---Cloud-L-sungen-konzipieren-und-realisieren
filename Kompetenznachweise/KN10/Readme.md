@@ -112,6 +112,6 @@ Die Wahl der Lösung hängt von den Prioritäten der Firma ab:
 
 **Empfehlung:**
 
-- Für maximale Kontrolle, Kostenersparnis und Flexibilität: **AWS**
+- Für maximale Kontrolle und Flexibilität: **AWS**
 - Für einfache Bedienung und schnelle Migration: **Heroku**
 - Für die schnellst mögliche Einzastzbereitschaft geringsten Aufwand: **Zoho**
