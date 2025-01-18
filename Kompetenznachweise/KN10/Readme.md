@@ -42,7 +42,7 @@ $$
 
 ### Begründung zur Auswahl
 
-Der Standard Tier Dyno von Heroku deckt die angegebenen Anforderung ab. Für den Web-Server können wir auf 1GB Ram und 1 vCPU zurückgreifen. Für die Datenbank können wir auf 4GB Ram, 100GB Speicher und 2 vCPU zurückgreifen. Die Kosten sind im Vergleich zu anderen Anbietern höher wenn 2 Dynos verwendet werden. Eine alternative wäre die Verwendung von einem Standard Dyno für beide Anwendungen. Dies würde jedoch die Performance und Sicherhei beeinträchtigen.
+Der Standard Tier Dyno von Heroku deckt die angegebenen Anforderung ab. Für den Web-Server können wir auf 1GB Ram und 1 vCPU zurückgreifen. Für die Datenbank können wir auf 4GB Ram, 100GB Speicher und 2 vCPU zurückgreifen. Die Kosten sind, im Vergleich zu anderen Anbietern, höher wenn 2 Dynos verwendet werden. Eine Alternative wäre die Verwendung von einem Standard Dyno für beide Anwendungen. Dies würde jedoch die Performance und Sicherheit beeinträchtigen.
 
 ### Wieso ist die Cloud-Infrastruktur kostengünstiger als die On-Premise Infrastruktur?
 
